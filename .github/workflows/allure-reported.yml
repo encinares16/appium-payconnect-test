@@ -1,0 +1,53 @@
+name: Payconnect Allure Report
+
+on:
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-allure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Copy history if gh-pages exists
+        run: |
+          if git ls-remote --exit-code origin gh-pages; then
+            echo "gh-pages branch found. Copying history..."
+            git fetch origin gh-pages
+            git checkout origin/gh-pages -- history || echo "No history folder found"
+            mkdir -p allure-results/history
+            cp -r history/* allure-results/history/ || true
+          else
+            echo "gh-pages branch does not exist. Skipping history copy."
+          fi
+          
+      - name: Create Allure Executor Info
+        run: |
+          cat <<EOF > allure-results/executor.json
+          {
+            "name": "GitHub Actions",
+            "type": "github",
+            "buildName": "${{ github.workflow }}",
+            "buildUrl": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+            "reportUrl": "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/",
+            "buildOrder": ${{ github.run_number }}
+          }
+          EOF
+
+      - name: Generate Allure Report (no testing)
+        run: npm run allure-generate
+
+      - name: Deploy Allure Report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-report

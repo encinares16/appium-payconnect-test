@@ -1,0 +1,15 @@
+2025-11-28T05:42:27.494Z DEBUG @wdio/utils:initializeServices: initialize service "appium" as NPM package
+2025-11-28T05:42:27.528Z INFO @wdio/cli:launcher: Run onPrepare hook
+2025-11-28T05:42:27.550Z INFO @wdio/appium-service: Will spawn Appium process: cmd /c node F:\Project\appium-payconnect\node_modules\appium\index.js --base-path / --port 4723
+2025-11-28T05:42:30.896Z INFO @wdio/appium-service: Appium started with ID: 9796
+2025-11-28T05:42:30.896Z DEBUG @wdio/cli:utils: Finished to run "onPrepare" hook in 3368ms
+2025-11-28T05:42:30.901Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2025-11-28T05:42:30.901Z DEBUG @wdio/cli:utils: Finished to run "onWorkerStart" hook in 0ms
+2025-11-28T05:42:30.901Z INFO @wdio/xvfb: XvfbManager.init() called
+2025-11-28T05:42:30.901Z INFO @wdio/xvfb: Xvfb not needed on current platform
+2025-11-28T05:42:30.903Z INFO @wdio/local-runner: Start worker 0-0 with arg: run wdio.conf.js
+2025-11-28T05:42:30.961Z INFO @wdio/xvfb:ProcessFactory: xvfb-run not found, falling back to regular fork
+2025-11-28T05:42:30.961Z INFO @wdio/xvfb:ProcessFactory: ProcessFactory: shouldRun=false, isAvailable=false
+2025-11-28T05:42:30.961Z INFO @wdio/xvfb:ProcessFactory: Creating worker process with regular fork
+2025-11-28T05:42:30.968Z DEBUG @wdio/local-runner: Send command run to worker with cid "0-0"
+2025-11-28T05:42:30.970Z DEBUG @wdio/appium-service: Appium logs written to: F:\Project\appium-payconnect\logs\wdio-appium.log
