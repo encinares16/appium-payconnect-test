@@ -17,6 +17,9 @@ export class VoidScreen {
     get errorMessage() {return $(`//android.widget.TextView[@text="Trace number doesn't exist."]`); }
     get buttonOK() {return $(`//android.widget.Button`); }
 
+    // get errorNull() {return $(`//android.widget.TextView[@text="Error..."]`); }
+    // get errorNull() {return $(`//android.widget.TextView[@text="Error..."]`); }
+
     async voidTransaction(traceNo){
         
         await numberedSteps.start(`Input the transaction trace number.`, async () => {
@@ -32,6 +35,9 @@ export class VoidScreen {
 
             await this.buttonVoidSubmitConfirm.waitForDisplayed();
             await this.buttonVoidSubmitConfirm.click();
+
+            await this.buttonOK.waitForDisplayed({ reverse: true, timeout: 5000 });
+            await this.errorNull.waitForDisplayed({ reverse: true, timeout: 5000 });
         })
     }
 

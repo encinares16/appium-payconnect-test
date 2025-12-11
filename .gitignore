@@ -13,3 +13,5 @@ test/screenshots
 test-script.js
 wdio.conf.copy.js
 # .github/
+/test-scripts
+test.js

@@ -6,7 +6,7 @@ export const project = {
     name: "Payconnect 2.0 Terminal",
     owner: "Jerome Encinares",
     op: "terminal", // open project
-    currentSprint: 29,
+    currentSprint: 27,
     currentBuild: '2.2.20u',
 };
 
@@ -51,6 +51,9 @@ export const testCase = {
             AU_002: `The system should allow the user to install the **KeyInjector** application and inject the **Master Key** successfully.\n\n### Preconditions\n1. The terminal is connected to the internet.\n2. The terminal is registered in the Payconnect Portal.`,
             AU_003: `The system should allow the user to proceed to the **Payconnect Main Screen** and close the app using the **Terminal Password**.\n\n### Preconditions\n1. The terminal is connected to the internet.\n2. The terminal is registered in the Payconnect Portal.\n3. The terminal Master Key is successfully injected.`,
             AU_004: `The system should display an error message with **Error Code: 10001** when launching the app with no internet connection.\n\n### Preconditions\n1. Wi-Fi or internet connection is disabled on the terminal.`,
+            AU_005: `The app should not close, the user should remain on the password entry screen, and the label **Password incorrect** should appear.\n\n### Preconditions\n1. The entered terminal password is invalid.`,
+            AU_006: `The system should block access to Sale, Refund, Void, and Settings when the terminal is disabled.\n\n### Preconditions\n1. The terminal is connected to the internet.\n2. The terminal is registered in the Payconnect Portal.\n3. The terminal does not have any recorded transaction data.\n4. The terminal is disabled.`,
+            AU_007: `The system should block access to Sale, Refund, and Void when the merchant is disabled.\n\n### Preconditions\n1. The terminal is connected to the internet.\n2. The terminal is registered in the Payconnect Portal.\n3. The terminal does not have any recorded transaction data.\n4. The assigned merchant is disabled.`,
         },
         sale: {
             AP_001: `The system should successfully launch the Payconnect application and process card transactions using **Tap** with the account type set to **Credit**.\n\n### Preconditions\n1. Visa is supported by the terminal.\n2. Sale feature is enabled in the terminal.\n3. The transaction amount must be valid and not less than ₱1.00.\n4. Account Type: Credit (CA).\n5. POS Entry Mode: Tap (T).`,

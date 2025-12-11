@@ -11,10 +11,12 @@ export const config = {
         // './test/specs/draft/*.js'   ,
         // './test/specs/sale/*.js',
         // './test/specs/void/*.js',
-        // './test/specs/authenticate/*.js',
+        // './test/specs/authenticate/*.e2e.js',
+        // './test/specs/authenticate/AU_005.e2e.js',
+        './test/specs/authenticate/AU_007.e2e.js',
         // './test/regression/sale/*.js',
         // './test/regression/void/*.js',
-        './test/specs/settlement/*.js',
+        // './test/specs/settlement/*.js',
     ],
     exclude: [
         // './test/dontrun/**/*.js'
@@ -24,7 +26,7 @@ export const config = {
         platformName: "Android",
         "appium:automationName": "UiAutomator2",
         "appium:deviceName": process.env.A90_SERIAL, //A90
-        "appium:platformVersion": process.env.A90_ANDROID_VERSION, 
+        "appium:platformVersion": process.env.A90_ANDROID_VERSION,
         "appium:appPackage": process.env.PAYCONNECT_PACKAGE,
         "appium:appActivity": process.env.PAYCONNECT_MAIN_ACTIVITY,
         'appium:noReset': true,

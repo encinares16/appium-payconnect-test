@@ -37,6 +37,33 @@ export const metadata = {
         severity: severity.critical,
         opProject: project.op,
         opTicketID: '55848',
+    },
+        AU_005: {
+        testID: 'AU_005',
+        description: testCase.description.authenticate.AU_005,
+        owner: project.owner,
+        tags: [project.name, features.authenticate, `Sprint ${project.currentSprint}`],
+        severity: severity.critical,
+        opProject: project.op,
+        opTicketID: '55848',
+    },
+        AU_006: {
+        testID: 'AU_006',
+        description: testCase.description.authenticate.AU_006,
+        owner: project.owner,
+        tags: [project.name, features.authenticate, `Sprint ${project.currentSprint}`],
+        severity: severity.critical,
+        opProject: project.op,
+        opTicketID: '63402',
+    },
+        AU_007: {
+        testID: 'AU_007',
+        description: testCase.description.authenticate.AU_007,
+        owner: project.owner,
+        tags: [project.name, features.authenticate, `Sprint ${project.currentSprint}`],
+        severity: severity.critical,
+        opProject: project.op,
+        opTicketID: '63402',
     }
 }
 

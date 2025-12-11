@@ -17,13 +17,12 @@ describe(testCase.title.auth, () => {
 
     it(testScenario.AU_004, async () => {
 
-        addMetadata(metadata.AU_004)
+        addMetadata(metadata.AU_004);
         addBehaviors(behaviorsData.epic, behaviorsData.features, behaviorsData.story);
         helpers.testInfoLogger(metadata.AU_004.testID, testCase.title.auth, testScenario.AU_004, metadata.AU_004.description);
+        await Activity.closeApp();
     
         try {
-            await Activity.closeApp()
-
             const getConnection = await driver.getNetworkConnection();
             const isWiFiEnabled = (getConnection & 2) === 2 || getConnection === 6;
 
