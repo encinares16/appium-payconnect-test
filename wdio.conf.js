@@ -14,9 +14,9 @@ export const config = {
         // './test/specs/authenticate/*.e2e.js',
         // './test/specs/authenticate/AU_005.e2e.js',
         // './test/specs/authenticate/AU_007.e2e.js',
-        './test/regression/sale/*.js',
+        // './test/regression/sale/*.js',
         // './test/regression/void/*.js',
-        // './test/specs/settlement/*.js',
+        './test/specs/settlement/*.js',
     ],
     exclude: [
         // './test/dontrun/**/*.js'

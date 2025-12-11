@@ -6,7 +6,7 @@ eng.traineddata
 /allure-report
 /allure-results-auth
 /allure-results-sale
-/allure-results-void
+/allure-results-*
 test/screenshots
 /test/specs/draft/*.js
 /test/specs/draft/*.txt
