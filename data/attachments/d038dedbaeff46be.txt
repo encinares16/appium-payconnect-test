@@ -1,7 +1,0 @@
-Error: Can't add new command when connection is in closed state
-    at PromiseConnection.execute (F:\Project\appium-payconnect-master\node_modules\mysql2\lib\promise\connection.js:47:22)
-    at Object.fetchMerchant (file:///F:/Project/appium-payconnect-master/helpers/query.js:45:41)
-    at Context.<anonymous> (file:///F:/Project/appium-payconnect-master/test/specs/authenticate/AU_007.e2e.js?invalidateCache=0.3007329766011979:64:52)
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async Context.executeAsync (F:\Project\appium-payconnect-master\node_modules\@wdio\utils\build\index.js:1105:20)
-    at async Context.testFrameworkFnWrapper (F:\Project\appium-payconnect-master\node_modules\@wdio\utils\build\index.js:1177:14)
