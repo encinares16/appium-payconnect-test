@@ -1,0 +1,11 @@
+Error: You have an error in your SQL syntax; check the manual that corresponds to your TiDB version for the right syntax to use line 3 column 51 near "= '%Appium Merch%'" 
+    at PromiseConnection.execute (F:\Project\appium-payconnect-master\node_modules\mysql2\lib\promise\connection.js:47:22)
+    at Object.enableMerchant (file:///F:/Project/appium-payconnect-master/helpers/query.js:67:45)
+    at file:///F:/Project/appium-payconnect-master/test/specs/authenticate/AU_007.e2e.js?invalidateCache=0.4292527236161725:66:40
+    at file:///F:/Project/appium-payconnect-master/helpers/customSteps.js:16:30
+    at <anonymous> (F:\Project\appium-payconnect-master\node_modules\allure-js-commons\src\facade.ts:113:48)
+    at <anonymous> (F:\Project\appium-payconnect-master\node_modules\allure-js-commons\src\sdk\runtime\MessageTestRuntime.ts:175:28)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (file:///F:/Project/appium-payconnect-master/node_modules/allure-js-commons/dist/esm/sdk/runtime/MessageTestRuntime.js:6:70)
+    at _next (file:///F:/Project/appium-payconnect-master/node_modules/allure-js-commons/dist/esm/sdk/runtime/MessageTestRuntime.js:7:163)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
