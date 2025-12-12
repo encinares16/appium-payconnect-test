@@ -1,3 +1,0 @@
-Oops. There was a problem in authentication...Error code: 10001
-
-Connection error...
